@@ -9,9 +9,10 @@ import random
 
 random.seed(1337)
 
+
 def main():
     nyan = cairo.ImageSurface.create_from_png('nyan.png')
-    frames = 200
+    frames = 100
 
     arcs = 600
     dtheta = (math.pi * 2) / (frames - 1)
@@ -37,7 +38,7 @@ def main():
         dc = 1 / (frames - 1)
 
         cr = cairo.Context(sur)
-        cr.set_line_width(14)
+        cr.set_line_width(20)
         cr.set_source_rgb(0.2, 0.2, 0.2)
         cr.move_to(0, 0)
         cr.rectangle(0, 0, sur.get_width(), sur.get_height())
