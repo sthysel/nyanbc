@@ -12,13 +12,13 @@ vibrations of the tuning fork. When he set up two tuning forks at right angles,
 with one vibrating at twice the frequency of the other, Lissajous found that
 the curved lines on the screen would combine to make a figure of eight pattern.
 
-ABC animated logoThe ABC logo is a 3:1 Lissajous figure -- if Lissajous wanted
+The Australian Broadcat Corporation (ABC) logo is a 3:1 Lissajous figure, if Lissajous wanted
 to see this pattern he would have to get one of his tuning forks to vibrate
 three times faster than the other.
 
-Why did the ABC choose a Lissajous figure for its logo?
+Why did the ABC choose a Lissajous figure for its logo? 
 
-Well, the ABC is both a radio network and a television network. Before the days
+The ABC is both a radio network and a television network. Before the days
 of electronic frequency counters, broadcast engineers often used Lissajous
 patterns to help tune equipment. A Lissajous pattern seemed a good motif,
 common to both radio and television.
