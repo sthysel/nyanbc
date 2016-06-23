@@ -1,15 +1,16 @@
-# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-# X = A sin(at + δ), Y = B sin(bt)
+# X = A sin(at + δ), Y = B sin(bt).
 # Where, a = 1, b = 3, δ = pi/2. A and B are arbitrary constants.
 # https://en.wikipedia.org/wiki/Lissajous_curve
+# libffi-dev
 
-import cairocffi as cairo  # libffi-dev
+import cairocffi as cairo
 import math
 import random
 
-random.seed(1337 + 1)
+random.seed(1337)
 TAU = 2 * math.pi  # pi must die
 
 
@@ -36,8 +37,6 @@ def main():
     for i in range(frames):
         spark_idx = round(len(colours) * i / frames) % len(colours)
         sur = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1000, 1000)
-        n_w = nyan.get_width()
-        n_h = nyan.get_height()
 
         cr = cairo.Context(sur)
         cr.set_line_width(20)
@@ -57,7 +56,6 @@ def main():
             r = math.sin(arc_theta - theta)**2
             g = math.cos(arc_theta - theta)**2
             b = 0.5 + math.sin(arc_theta - theta)**2
-
             cr.set_source_rgb(r, g, b)
             cr.move_to(last_x, last_y)
             cr.line_to(arc_x, arc_y)
@@ -69,6 +67,8 @@ def main():
 
         cr.set_source_rgb(r, g, b)
         ny_cr = cairo.Context(sur)
+        n_w = nyan.get_width()
+        n_h = nyan.get_height()
         ny_cr.set_source_surface(nyan, x - n_w / 2, y - n_h / 2)
         ny_cr.rectangle(x - n_w / 2, y - n_w / 2, n_w * 2, n_h * 2)
 
