@@ -28,4 +28,4 @@ would be a good ratio. (This makes an infinity symbol or a figure of eight
 lying on its side). But back in 1965, the figure of 8 logo was being used by
 the University of the Air. So the ABC decided to base their logo a 3:1 ratio.
 
-The ABC logo is a trademark of the Australian Broadcasting Corporation.
+The ABC logo is a trademark of the Australian Broadcat Corporation.
