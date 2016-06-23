@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 
-# yes, I know this code is mostly all wrong, but consider the topic
-# and also consider I have had considerable to drink.
+# X = A sin(at + δ), Y = B sin(bt)
+# Where, a = 1, b = 3, δ = pi/2. A and B are arbitrary constants.
+# https://en.wikipedia.org/wiki/Lissajous_curve
 
 import cairocffi as cairo  # libffi-dev
 import math
