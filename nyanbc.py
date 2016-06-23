@@ -3,11 +3,12 @@
 # yes, I know this code is mostly all wrong, but consider the topic
 # and also consider I have had considerable to drink.
 
-import cairo
+import cairocffi as cairo  # libffi-dev
 import math
 import random
 
-random.seed(1337)
+random.seed(1337 + 1)
+TAU = 2 * math.pi  # pi must die
 
 
 def main():
@@ -15,17 +16,18 @@ def main():
     frames = 100
 
     arcs = 600
-    dtheta = (math.pi * 2) / (frames - 1)
+    dtheta = TAU / (frames - 1)
 
-    sparkles = []
-    sparkles.append((120, 100, 5, 20))
-    sparkles.append((100, 50, 5, 20))
-    sparkles.append((80, 0, 5, 20))
-    sparkles.append((75, -30, 5, 20))
-    sparkles.append((80, -40, 5, 20))
-    sparkles.append((85, 40, 5, 20))
-    sparkles.append((100, -50, 5, 20))
-    sparkles.append((120, -100, 5, 20))
+    sparkles = [
+        (120, 100, 5, 20),
+        (100, 50, 5, 20),
+        (80, 0, 5, 20),
+        (75, -30, 5, 20),
+        (80, -40, 5, 20),
+        (85, 40, 5, 20),
+        (100, -50, 5, 20),
+        (120, -100, 5, 20),
+    ]
 
     colours = [(1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 0, 1), (1, 1, 0), (0, 1, 1)]
 
@@ -34,8 +36,6 @@ def main():
         sur = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1000, 1000)
         n_w = nyan.get_width()
         n_h = nyan.get_height()
-
-        dc = 1 / (frames - 1)
 
         cr = cairo.Context(sur)
         cr.set_line_width(20)
@@ -51,7 +51,11 @@ def main():
             arc_theta = j * darc_theta
             arc_x = 100 + (math.sin(arc_theta) + 1) * 400
             arc_y = 100 + (math.cos(3 * arc_theta) + 1) * 400
-            r, g, b = math.sin(arc_theta - theta) ** 2, math.cos(arc_theta - theta) ** 2, 0.5 + math.sin(arc_theta - theta) ** 2
+
+            r = math.sin(arc_theta - theta)**2
+            g = math.cos(arc_theta - theta)**2
+            b = 0.5 + math.sin(arc_theta - theta)**2
+
             cr.set_source_rgb(r, g, b)
             cr.move_to(last_x, last_y)
             cr.line_to(arc_x, arc_y)
