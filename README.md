@@ -23,7 +23,7 @@ of electronic frequency counters, broadcast engineers often used Lissajous
 patterns to help tune equipment. A Lissajous pattern seemed a good motif,
 common to both radio and television.
 
-Because the ABC broadcast in both radio and television, it seemed like 2:1
+Because the ABC broadcat in both radio and television, it seemed like 2:1
 would be a good ratio. (This makes an infinity symbol or a figure of eight
 lying on its side). But back in 1965, the figure of 8 logo was being used by
 the University of the Air. So the ABC decided to base their logo a 3:1 ratio.
